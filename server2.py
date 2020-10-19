@@ -6,7 +6,7 @@ s.listen(5)
 
 print(s)
 
-while True:
+for _ in range(5):
     print("runing")
     clientsocket, address = s.accept()
     print(clientsocket)
@@ -14,3 +14,4 @@ while True:
     clientsocket.send(bytes("Welcome to the server ", "utf-8"))
     clientsocket.close()
     
+print("closing..")
